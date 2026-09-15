@@ -102,7 +102,7 @@ else:
 
 discount = subtotal * discount_rate
 discount_amount = subtotal - discount
-tax = discount_amount * 0.12
+tax = discount_amount * 0.05
 final_total = discount_amount + tax
 
 print("==================================================")
@@ -120,7 +120,7 @@ print(f"Subtotal Drinks: {subtotal_drinks:.2f}")
 print("==================================================")
 print(f"Subtotal       : P{subtotal:.2f}")
 print(f"Discount       : P{discount:.2f}")
-print(f"Tax (12%)      : P{tax:.2f}")
+print(f"Tax (5%)      : P{tax:.2f}")
 print("==================================================")
 print(f"Total Payment  : P{final_total:.2f}")
 print("==================================================")
