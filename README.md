@@ -39,10 +39,10 @@ if qty <= 0:
     
 subtotal_food = price * qty    
     
-drinks = input("If you want add Drinks? (Y)Yes/(N)No: ").upper()
+drinks = input("Add Drinks? (Y)Yes or (N)No: ").upper()
 
 if drinks == "Y":
-   print("======== OUR DRINKS ===================")
+   print("--------- OUR DRINKS ------------")
    print("[C] COKE:            -P20")
    print("[S] SPRITE :         -P20")
    print("[R] ROYAL:           -P20")
