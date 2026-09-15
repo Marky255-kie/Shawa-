@@ -1,11 +1,9 @@
-# Shawa-
-trffvb
 print("==================================================")
-print("===================== WELCOME ====================")
+print("===================== WELCOME! ====================")
 print("=============== SHAWARMARK FOOD STORE ============")
 print("==================================================")
 
-print("========== OUR MENU ===================")
+print("------------OUR FOOD MENU ---------------")
 print("[SW] Shawarma Wrap:        -P80")
 print("[SS] Shawarma Salad:       -P120")
 print("[SB] Shawarma Burger:      -P70")
@@ -39,6 +37,8 @@ if qty <= 0:
     print("Invalid Food Quantity!")
     exit()
     
+subtotal_food = price * qty    
+    
 drinks = input("If you want add Drinks? (Y)Yes/(N)No: ").upper()
 
 if drinks == "Y":
@@ -69,6 +69,7 @@ if drinks == "Y":
     
    else:
     print("Invalid Code!")
+    exit()
    
    quantity = int(input("Enter Drinks Quantity: "))
 
@@ -84,12 +85,12 @@ elif drinks == "N":
    print("No Drinks!")
    
 else:
-   print("Invalid Input! Enter (Y) or (N)")
+   print("Invalid Input! Please Enter (Y) or (N)")
    exit()
    
-subtotal = price * qty
-subtotal_2 = drink_price * quantity 
-subtotal_3 = subtotal + subtotal_2 
+subtotal_drinks = drink_price * quantity    
+   
+subtotal = subtotal_food + subtotal_drinks
 
 
 if subtotal >= 1000:
@@ -100,7 +101,7 @@ else:
     discount_rate = 0
 
 discount = subtotal * discount_rate
-discount_amount = subtotal_3 - discount
+discount_amount = subtotal - discount
 tax = discount_amount * 0.12
 final_total = discount_amount + tax
 
@@ -110,14 +111,14 @@ print("==================================================")
 print(f"Product food   : {product}")
 print(f"Price          : P{price:.2f}")
 print(f"Quantity       : {qty}")
-print(f"Subtotal food  : {subtotal:.2f}")
+print(f"Subtotal food  : {subtotal_food:.2f}")
 print("==================================================")
 print(f"Product Drink  : {drink_product}")
 print(f"Drink  Price   : P{drink_price:.2f}")
 print(f"Drink Quantity : {quantity}")
-print(f"Subtotal Drinks: {subtotal_2:.2f}")
+print(f"Subtotal Drinks: {subtotal_drinks:.2f}")
 print("==================================================")
-print(f"Subtotal       : P{subtotal_3:.2f}")
+print(f"Subtotal       : P{subtotal:.2f}")
 print(f"Discount       : P{discount:.2f}")
 print(f"Tax (12%)      : P{tax:.2f}")
 print("==================================================")
@@ -128,13 +129,14 @@ payment = float(input("Enter payment: P"))
 
 if payment >= final_total:
     change = payment - final_total
-    print(f"payment    :P{payment:.2f}")
-    print(f"change     :P{change:.2f}")
+    print(f"Payment    : P{payment:.2f}")
+    print(f"Change     : P{change:.2f}")
 else:
     balance = final_total - payment
     print("Insufficient payment!")
-    print(f"Balance    :P{balance:.2f}")
+    print(f"Balance    : P{balance:.2f}")
 
 print("==================================================")
-print("================= THANK YOU ======================")
+print("================= THANK YOU! =====================")
+print("============= PLEASE COME AGAIN! =================")
 print("==================================================")
