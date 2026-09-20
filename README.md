@@ -83,7 +83,7 @@ elif drinks == "N":
    drink_product = "None"
    drink_price = 0
    quantity = 0
-   subtotal_2 = 0
+   subtotal_drinks = 0
    print("No Drinks!")
    
 else:
