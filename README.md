@@ -1,15 +1,16 @@
-print("==================================================")
-print("===================== WELCOME! ====================")
-print("=============== SHAWARMARK FOOD STORE ============")
-print("==================================================")
+print("=" *50)
+print("                      WELCOME!")
+print("                SHAWARMARK FOOD STORE")
+print("=" *50)
 
-print("------------OUR FOOD MENU ---------------")
+print("            OUR FOOD MENU")
 print("[SW] Shawarma Wrap:        -P80")
 print("[SS] Shawarma Salad:       -P120")
 print("[SB] Shawarma Burger:      -P70")
 print("[ST] Shawarma Tacos:       -P85")
 print("[SF] Shawarma Fries:       -P85")
 
+name = input("Enter your name: ") 
 food = input("Enter Food Code: ").upper()
 
 if food == "SW":
@@ -42,7 +43,7 @@ subtotal_food = price * qty
 drinks = input("Add Drinks? (Y)Yes or (N)No: ").upper()
 
 if drinks == "Y":
-   print("--------- OUR DRINKS ------------")
+   print("           OUR DRINKS ")
    print("[C] COKE:            -P20")
    print("[S] SPRITE :         -P20")
    print("[R] ROYAL:           -P20")
@@ -75,6 +76,7 @@ if drinks == "Y":
 
    if quantity <= 0:
     print("Invalid Drinks Quantity!")
+    exit()
     
     
 elif drinks == "N":
@@ -105,25 +107,26 @@ discount_amount = subtotal - discount
 tax = discount_amount * 0.05
 final_total = discount_amount + tax
 
-print("==================================================")
-print("==================== RECIEPT =====================")
-print("==================================================")
+print("=" *50)
+print("                    RECIEPT")
+print("=" *50)
+print(f"Customer Name  : {name}") 
 print(f"Product food   : {product}")
 print(f"Price          : P{price:.2f}")
 print(f"Quantity       : {qty}")
 print(f"Subtotal food  : {subtotal_food:.2f}")
-print("==================================================")
+print("=" *50)
 print(f"Product Drink  : {drink_product}")
 print(f"Drink  Price   : P{drink_price:.2f}")
 print(f"Drink Quantity : {quantity}")
 print(f"Subtotal Drinks: {subtotal_drinks:.2f}")
-print("==================================================")
+print("=" *50)
 print(f"Subtotal       : P{subtotal:.2f}")
 print(f"Discount       : P{discount:.2f}")
 print(f"Tax (5%)      : P{tax:.2f}")
-print("==================================================")
+print("=" *50)
 print(f"Total Payment  : P{final_total:.2f}")
-print("==================================================")
+print("=" *50)
 
 payment = float(input("Enter payment: P"))
 
@@ -136,7 +139,8 @@ else:
     print("Insufficient payment!")
     print(f"Balance    : P{balance:.2f}")
 
-print("==================================================")
-print("================= THANK YOU! =====================")
-print("============= PLEASE COME AGAIN! =================")
-print("==================================================")
+print("=" *50)
+print("                   THANK YOU!")
+print("               PLEASE COME AGAIN!")
+print("=" *50)
+    
