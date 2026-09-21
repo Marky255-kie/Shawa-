@@ -3,6 +3,8 @@ print("                      WELCOME!")
 print("                SHAWARMARK FOOD STORE")
 print("=" *50)
 
+name = input("Enter your name: ") 
+
 print("            OUR FOOD MENU")
 print("[SW] Shawarma Wrap:        -P80")
 print("[SS] Shawarma Salad:       -P120")
@@ -10,7 +12,6 @@ print("[SB] Shawarma Burger:      -P70")
 print("[ST] Shawarma Tacos:       -P85")
 print("[SF] Shawarma Fries:       -P85")
 
-name = input("Enter your name: ") 
 food = input("Enter Food Code: ").upper()
 
 if food == "SW":
